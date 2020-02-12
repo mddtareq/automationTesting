@@ -47,8 +47,12 @@ public class facebookRegistration {
 	}	
 	public static void loop() {
 		for (int i = 0; i <20; i++) {
-			driver.findElement(By.xpath("//*[@id=\'u_0_13\']")).click();
-		}
+			driver.findElement(By.xpath("//*[@id=\'u_0_b\']")).click();
+			driver.findElement(By.xpath("//*[@id=\'email\']")).sendKeys("Mohammad Tareq"+i);
+			driver.findElement(By.xpath("//*[@id=\'pass\']")).sendKeys("passWord"+i);
+			driver.findElement(By.xpath("//*[@id=\'loginbutton\']")).click();
+			driver.navigate().back();
+			driver.navigate().back();}
 	}
 	public static void close() {
 		driver.close();;

@@ -30,7 +30,7 @@ public class exeltry {
 		ob.writeExel(filepath,fileExtensionName,sheetName,value);
 
 	}
-	public static void readExel(File path,String extension,String sheetName) throws IOException{
+	public void readExel(File path,String extension,String sheetName) throws IOException{
 		FileInputStream file = new FileInputStream(path);
 		if(extension.equals(".xlsx")){
 			XSSFWorkbook workbook = new XSSFWorkbook(file);
@@ -58,7 +58,7 @@ public class exeltry {
 			}
 			workbook.close();}
 	}
-	public static void writeExel(File path,String extension,String sheetName,String[] dataWrite) throws IOException{
+	public void writeExel(File path,String extension,String sheetName,String[] dataWrite) throws IOException{
 		FileInputStream infile = new FileInputStream(path);
 		if(extension.equals(".xlsx")){
 			XSSFWorkbook workbook = new XSSFWorkbook(infile);
@@ -73,6 +73,7 @@ public class exeltry {
 			FileOutputStream outfile = new FileOutputStream(path);
 			workbook.write(outfile);
 			outfile.close();
+			workbook.close();
 		}
 		else if(extension.equals(".xls")){
 			HSSFWorkbook workbook = new HSSFWorkbook(infile);
@@ -87,6 +88,7 @@ public class exeltry {
 			FileOutputStream outfile = new FileOutputStream(path);
 			workbook.write(outfile);
 			outfile.close();
+			workbook.close();
 		}
 
 	}
