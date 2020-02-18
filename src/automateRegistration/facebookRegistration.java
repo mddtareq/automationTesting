@@ -10,29 +10,29 @@ public class facebookRegistration {
 	public static void main(String[] args) {
 		page();
 		reg();
-		login();
-		loop();
-		close();
+		//login();
+		//loop();
+		//close();
 		
 	}
 	public static void page() {
 		System.setProperty("webdriver.gecko.driver","C:\\Users\\USER\\eclipse-workspace\\automationTesting\\browserDriver\\geckodriver.exe");
 		driver =new FirefoxDriver();
-		driver.get("http://facebook.com");
+		driver.get("https://dokan.ajaira.website/my-account/");
 		driver.manage().window().maximize();
 	}
 	public static void reg() {
-		driver.findElement(By.xpath("//*[@id='u_0_m']")).sendKeys("Mohammad");
-		driver.findElement(By.xpath("//*[@id=\'u_0_o\']")).sendKeys("Tareq");
-		driver.findElement(By.xpath("//*[@id=\'u_0_r\']")).sendKeys("tareq@gmail.com");
-		Select s1=new Select(driver.findElement(By.xpath("//*[@id='day']")));
-		s1.selectByIndex(5);
-		Select s2=new Select(driver.findElement(By.xpath("//*[@id=\'month\']")));
-		s2.selectByValue("6");
-		Select s3=new Select(driver.findElement(By.xpath("//*[@id='year']")));
-		s3.selectByVisibleText("2016");
-		driver.findElement(By.xpath("//*[@id='u_0_7']")).click();
-		driver.findElement(By.xpath("//*[@id=\'u_0_13\']")).click();
+		driver.findElement(By.xpath("//*[@id=\'reg_email\']")).sendKeys("Mohammad");
+		//driver.findElement(By.xpath("//*[@id=\'u_0_o\']")).sendKeys("Tareq");
+		//driver.findElement(By.xpath("//*[@id=\'u_0_r\']")).sendKeys("tareq@gmail.com");
+		//Select s1=new Select(driver.findElement(By.xpath("//*[@id='day']")));
+		//s1.selectByIndex(5);
+		//Select s2=new Select(driver.findElement(By.xpath("//*[@id=\'month\']")));
+		//s2.selectByValue("6");
+		//Select s3=new Select(driver.findElement(By.xpath("//*[@id='year']")));
+		//s3.selectByVisibleText("2016");
+		//driver.findElement(By.xpath("//*[@id='u_0_7']")).click();
+		//driver.findElement(By.xpath("//*[@id=\'u_0_13\']")).click();
 		//driver.findElement(By.className("_8esh")).click();
 		
 	}

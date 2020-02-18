@@ -11,14 +11,14 @@ public class browseDriver {
 	public static String browser;
 	static WebDriver driver;
 	public static void main(String[] args) {
-		//setBrowser();
-		propertiesFile.readProperties();
+		setBrowser();
+		//propertiesFile.readProperties();
 		setBrowserConfig();
 		runTest();
 	}
 	public static void setBrowser() {
-		//browser="Firefox";
-		browser="Chrome";
+		browser="Firefox";
+		//browser="Chrome";
 	}
 	public static void setBrowserConfig() {
 		if(browser.contains("Firefox")){
